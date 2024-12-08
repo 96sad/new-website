@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300..700&display=swap');
+
+*,
+*:after,
+*:before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+:active,
+:hover,
+:focus{
+    outline: 0 !important;
+    outline-offset: 0;
+}
+a,
+a:hover{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--bg-secondary) !important;
+}
+
+ul,
+ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* ====== Variables ====== */
+:root {
+    /* Background Colors */
+    --bg-primary: #FFFFFF; /* Main background */
+    --bg-secondary: #0180ff; /* Section background */
+    --bg-accent: #dcedff; /* Slightly pale background for accents */
+    --bg-dark: #1E1E1E; /* Dark sections or footer */
+  
+    /* Text Colors */
+    --text-primary: #0D0D0D; /* Main text */
+    --text-secondary: #2C2C2C; /* Subheadings or muted text */
+    --text-muted: #1E1E1E; /* Light-muted text */
+   
+    /* Font Families */
+    --primary-font: "Signika Negative", sans-serif; /* Primary font for headings */
+    --secondary-font: "Roboto", sans-serif; /* Secondary font for body text */
+   
+    /* Button Colors */
+    --button-primary-bg: #0D0D0D; /* Primary button background */
+    --button-primary-text: #FFFFFF; /* Text color for primary buttons */
+    --button-secondary-bg: #F5F5F5; /* Secondary button background */
+    --button-secondary-text: #0D0D0D; /* Text color for secondary buttons */
+  
+    /* Borders/Lines */
+    --border-color: #E0E0E0; /* For dividers or card borders */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body{
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+  }
+
+  /* 
+  ========================================
+  Custom Scrollbar
+  ========================================
+  */
+
+  ::-webkit-scrollbar {
+    width: 0.625rem;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-dark);
+  }
+
+  /* 
+  Custom CSS Design
+  */
+
+  h1{
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--bg-accent);
+    text-transform: capitalize;
+  }
+
+  h2{
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    color: var(--bg-accent);
+    line-height: 3rem;
+  }
+
+h3{
+font-size: 18px;
+    font-weight: 900;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-primary);
+}
+
+  h4{
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    color: var(--text-muted);
+  }
+  
+  h5{
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    color: var(--bg-secondary);
+  }
+
+  p{
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--bg-primary);
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+  }
+
+  .main-btn{
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--bg-secondary);
+    border: 0.1875rem solid var(--bg-secondary);
+    color: var(--bg-primary);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+  }
+
+  .white-btn{
+    padding:  0.625rem 1.875rem;;
+    line-height: 25px;
+    background-color: var(--bg-accent);
+    border:  0.1875rem solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+  }
+
+  .main-btn:hover{
+    background-color: transparent;
+    color: #0D0D0D;
+  }
+
+  .white-btn:hover{
+    background-color: var(--button-secondary-bg);
+    color: var(--bg-dark);
+    border-color: #0180ff;
+  }
+
+  .wrapper{
+    padding-top: 8.25rem;
+    padding-bottom: 8.25rem;
+  }
+
+  .text-content{
+    width: 70%;
+    margin: auto;
+  }
+
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2{
+    color: var(--bg-accent);
+}
+
+/* 
+========================================
+Header Design
+========================================
+*/
+.navigation-wrap{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.navigation-wrap .nav-item{
+    padding: 0 0.625rem;
+    transition: all 200ms linear;
+}
+.navbar-toggler:focus{
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+.nav-link{
+    font-size: 0.9375rem;
+    color: var(--bg-accent);
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.navigation-wrap .main-btn{
+    padding: 0.3125rem 1.4375rem;
+    box-shadow: none;
+    margin-left: 0.625rem;
+}
+
+/* Change navbar styling on scroll */
+.navigation-wrap.scroll-on{
+    background-color: var(--bg-primary);
+    box-shadow: 0 0.125rem 1.75rem 0 rgb(0 0 0 / 0.09);
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    transition: all .15s ease-in-out 0s;
+}
+
+/* 
+========================================
+hero-section Design
+========================================
+*/
+
+.hero-section{
+    width: 100%;
+    background-image: url('../img/hero-section-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 14.875rem 0 9.375rem;
+}
+#home h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: var(--bg-accent);
+    text-transform: capitalize;
+    text-align:left;
+    font-family: var(--primary-font);
+  }
+  #home p{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--bg-primary);
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .hero-btn{
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--bg-secondary);
+    border: 0.1875rem solid var(--bg-secondary);
+    color: var(--bg-primary);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+  }
+  .hero-btn:hover{
+    background-color: transparent;
+    color: var(--bg-primary);
+  }
+  .hero2-btn{
+    padding:  0.625rem 1.875rem;;
+    line-height: 25px;
+    background-color: var(--bg-accent);
+    border:  0.1875rem solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+  }
+
+  .hero2-btn:hover{
+    background-color: transparent;
+    color: var(--bg-accent);
+  }
+
+
+/* 
+========================================
+services-title-section Design
+========================================
+*/
+.services-title-section{
+    padding: 2.5rem 0;
+}
+
+
+/* 
+========================================
+services-section Design
+========================================
+*/
+.services-section{
+    padding: 2.5rem 0;   
+}
+#services i{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#services h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--bg-dark);
+    text-transform: capitalize;
+    text-align: left;
+    font-family: var(--primary-font);
+    padding: 1.5rem 0;
+  }
+
+  /* about section */
+
+  .about-section{
+    background-color: var(--bg-accent);
+  }
+  .about-section h3{
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: var(--bg-secondary);
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    padding: 1.5rem 0;
+  }
+
+  /* count-section */
+  .count-section{
+    background-color: var(--bg-primary);
+    padding: 1.5rem 0;
+  }
+  .count-section h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--bg-secondary);
+    text-transform: capitalize;
+    font-family: var(--primary-font);
+  }
+  .highlight {
+    display: inline-block; /* Makes the border fit only the text */
+    border-bottom: 4px solid #007bff; /* Adjust color and thickness */
+  }
+  .count-section p{
+    color: var(--bg-secondary);
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+
+
+  /* work */
+  #services-work-title{
+    padding: 3.5rem 0;
+  }
+  #services i{
+    background-color: var(--bg-accent);
+  }
+  .work-section{
+    background-image: url(../img/work-section.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4.5rem 0;
+  }
+
+  /* testimonial */
+  .testimonial-section{
+    padding: 5.5rem 0;
+  }
+
+  /* testimonial-card-section */
+  .testimonial-card-section i{
+    border: 2px solid var(--bg-secondary);
+    border-radius: 50%;
+    padding: 0.6546rem;
+  }
+  .highlight2{
+    display: inline-block;
+    border-bottom: 2px solid var(--bg-dark);
+  }
+  .testimonial-card-section .card1{
+    background-color: var(--bg-primary);
+    color: var(--bg-dark);
+    border-radius: 10px;
+    padding: 2.5rem;
+  }
+
+
+
+  /* footer-section */
+  .footer-section{
+    background-color: var(--bg-dark);
+    padding: 2.5rem 0;
+  }
+  form .input-group{
+    background-color: var(--bg-dark);
+    border: none;
+    color: var(--bg-accent);
+    form input:focus{
+    box-shadow: none;
+  }
+  form input::placeholder{
+    color: var(--bg-dark);
+  }
+}
+form button{
+  border-radius: 50px;
+}
+form button:hover{
+  color: var(--bg-primary);
+}
+
+/* contact */
+#contact i{
+  color: var(--bg-accent);
+  font-size: 1.8rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+#contact i:hover{
+  color: var(--bg-secondary);
+  transition: 0.5s;
+  transform: scale(1.1);
+}
